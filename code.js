@@ -3,16 +3,26 @@ const helloWorld = function() {
     return "Hello, World!";
 }
 
+// function sayHello(input){
+//     if(input === true){
+//         return "Hello, World!"
+//     } else if(input === false){
+//         return "Hello, World!"
+//     }
+//     if(input === undefined){
+//         return "Hello, World!"
+//     } else {
+//         return "Hello, " + input + "!";
+//     }
+//
+// }
+
 function sayHello(input){
-    if(input === true){
-        return "Hello, World!"
-    } else if(input === false){
-        return "Hello, World!"
-    }
-    if(input === undefined){
-        return "Hello, World!"
-    } else {
-        return "Hello, " + input + "!";
-    }
+  switch(input){
+      case true: case false: case "": case undefined:
+          return "Hello, World!"
+      default:
+          return "Hello, " + input + "!";
+  }
 
 }
